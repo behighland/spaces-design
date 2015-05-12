@@ -91,6 +91,7 @@ define(function (require, exports) {
     };
     installShapeDefaults.reads = [locks.PS_DOC, locks.JS_DOC];
     installShapeDefaults.writes = [locks.PS_DOC, locks.JS_DOC];
+    installShapeDefaults.modal = true;
 
     /**
      * Swaps the policies of the current tool with the next tool
@@ -232,6 +233,7 @@ define(function (require, exports) {
     resetSuperselect.reads = [locks.JS_APP, locks.JS_TOOL, locks.JS_SHORTCUT, locks.PS_DOC, locks.JS_DOC];
     resetSuperselect.writes = [locks.PS_APP, locks.JS_POLICY, locks.PS_TOOL, locks.JS_TOOL, locks.JS_SHORTCUT,
             locks.PS_DOC, locks.JS_DOC];
+    resetSuperselect.modal = true;
 
     /**
      * Resets the pointer policies around the selection border so we can pass

@@ -177,6 +177,7 @@ define(function (require, exports) {
     };
     updatePanelSizes.reads = [locks.JS_APP];
     updatePanelSizes.writes = [locks.JS_UI];
+    updatePanelSizes.modal = true;
 
     /**
      * Updates the center offsets being sent to PS
@@ -195,6 +196,7 @@ define(function (require, exports) {
     };
     updateToolbarWidth.reads = [locks.JS_APP];
     updateToolbarWidth.writes = [locks.JS_UI];
+    updateToolbarWidth.modal = true;
 
     /**
      * Calculates the panZoom descriptor given bounds, panel width, zoom and uiFactor
@@ -412,6 +414,7 @@ define(function (require, exports) {
     };
     beforeStartup.reads = [];
     beforeStartup.writes = [locks.JS_UI, locks.PS_APP];
+    beforeStartup.modal = true;
 
     /**
      * Center the document after startup.
@@ -436,6 +439,7 @@ define(function (require, exports) {
     };
     afterStartup.reads = [locks.PS_APP, locks.JS_DOC];
     afterStartup.writes = [locks.JS_UI];
+    afterStartup.modal = true;
 
     /**
      * Remove event handlers.
@@ -451,7 +455,7 @@ define(function (require, exports) {
     };
     onReset.reads = [];
     onReset.writes = [];
-
+    onReset.modal = true;
     
     exports.togglePinnedToolbar = togglePinnedToolbar;
     exports.updateTransform = updateTransform;

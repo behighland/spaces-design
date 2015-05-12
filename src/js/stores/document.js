@@ -779,7 +779,7 @@ define(function (require, exports, module) {
 
             if (!postScriptName) {
                 var message = stringUtil.format(
-                    "Unable to find postscript font name for style {1} of family {0}",
+                    "Unable to find postscript font name for style ${1} of family ${0}",
                     family,
                     style
                 );

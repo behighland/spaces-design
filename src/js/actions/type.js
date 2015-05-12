@@ -69,7 +69,8 @@ define(function (require, exports) {
                 target: documentLib.referenceBy.id(documentID),
                 coalesce: !!coalesce,
                 suppressHistoryStateNotification: !!coalesce
-            }
+            },
+            canExecuteWhileModal : true
         };
     };
 
@@ -114,6 +115,7 @@ define(function (require, exports) {
     };
     setPostScript.reads = [];
     setPostScript.writes = [locks.PS_DOC, locks.JS_DOC];
+    setPostScript.modal = true;
 
     /**
      * Set the type face (in terms of a type family and type style) of the given
@@ -154,6 +156,7 @@ define(function (require, exports) {
     };
     setFace.reads = [];
     setFace.writes = [locks.PS_DOC, locks.JS_DOC];
+    setFace.modal = true;
 
     /**
      * Set the type of the given layers in the given document. The alpha value of
@@ -202,6 +205,7 @@ define(function (require, exports) {
     };
     setColor.reads = [];
     setColor.writes = [locks.PS_DOC, locks.JS_DOC];
+    setColor.modal = true;
 
     /**
      * Set the type size of the given layers in the given document. This triggers
@@ -243,6 +247,7 @@ define(function (require, exports) {
     };
     setSize.reads = [];
     setSize.writes = [locks.PS_DOC, locks.JS_DOC];
+    setSize.modal = true;
 
     /**
      * Set the tracking value (aka letter-spacing) of the given layers in the given document.
@@ -282,6 +287,7 @@ define(function (require, exports) {
     };
     setTracking.reads = [];
     setTracking.writes = [locks.PS_DOC, locks.JS_DOC];
+    setTracking.modal = true;
 
     /**
      * Set the leading value (aka line-spacing) of the given layers in the given document.
@@ -321,6 +327,7 @@ define(function (require, exports) {
     };
     setLeading.reads = [];
     setLeading.writes = [locks.PS_DOC, locks.JS_DOC];
+    setLeading.modal = true;
 
     /**
      * Set the paragraph alignment of the given layers in the given document.
@@ -359,6 +366,7 @@ define(function (require, exports) {
     };
     setAlignment.reads = [];
     setAlignment.writes = [locks.PS_DOC, locks.JS_DOC];
+    setAlignment.modal = true;
 
     /**
      * Initialize the list of installed fonts from Photoshop.
@@ -373,6 +381,7 @@ define(function (require, exports) {
     };
     afterStartup.reads = [locks.PS_APP];
     afterStartup.writes = [locks.JS_TYPE];
+    afterStartup.modal = true;
 
     exports.setPostScript = setPostScript;
     exports.setFace = setFace;

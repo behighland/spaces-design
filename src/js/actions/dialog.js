@@ -45,6 +45,7 @@ define(function (require, exports) {
     };
     registerDialog.reads = [];
     registerDialog.writes = [locks.JS_DIALOG];
+    registerDialog.modal = true;
 
     /**
      * Deregister a dialog with a given ID
@@ -62,6 +63,7 @@ define(function (require, exports) {
     };
     deregisterDialog.reads = [];
     deregisterDialog.writes = [locks.JS_DIALOG];
+    derigisterDialog.modal = true;
 
     /**
      * Open a dialog with a given ID and optional dismissal policy.
@@ -82,6 +84,7 @@ define(function (require, exports) {
     };
     openDialog.reads = [];
     openDialog.writes = [locks.JS_DIALOG];
+    openDialog.modal = true;
 
     /**
      * Close an already open dialog with the given ID.
@@ -99,6 +102,7 @@ define(function (require, exports) {
     };
     closeDialog.reads = [];
     closeDialog.writes = [locks.JS_DIALOG];
+    closeDialog.modal = true;
 
     /**
      * Close all open dialogs.
@@ -111,6 +115,7 @@ define(function (require, exports) {
     };
     closeAllDialogs.reads = [];
     closeAllDialogs.writes = [locks.JS_DIALOG];
+    closeAllDoalogs.modal = true;
 
     exports.registerDialog = registerDialog;
     exports.deregisterDialog = deregisterDialog;

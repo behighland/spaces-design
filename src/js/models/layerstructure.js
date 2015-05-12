@@ -1333,10 +1333,10 @@ define(function (require, exports, module) {
                 throw new Error("Unable to set text style properties: no styles");
             }
 
-            if (styles.size > 1) {
-                log.warn("Multiple styles are unsupported. Reverting to a single style.");
-                styles = styles.slice(0, 1);
-            }
+            // if (styles.size > 1) {
+            //     log.warn("Multiple styles are unsupported. Reverting to a single style.");
+            //     styles = styles.slice(0, 1);
+            // }
 
             var nextStyles = styles.map(function (style) {
                 return style.merge(properties);

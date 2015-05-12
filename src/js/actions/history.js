@@ -65,6 +65,7 @@ define(function (require, exports) {
     };
     queryCurrentHistory.reads = [locks.PS_DOC];
     queryCurrentHistory.writes = [locks.JS_DOC];
+    queryCurrentHistory.modal = true;
 
     /**
      * Given a history state event from photoshop, dispatch a flux event for the history store
@@ -272,6 +273,7 @@ define(function (require, exports) {
     };
     onReset.reads = [];
     onReset.writes = [];
+    onReset.modal = true;
 
     exports.queryCurrentHistory = queryCurrentHistory;
     exports.handleHistoryState = handleHistoryState;

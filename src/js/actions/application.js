@@ -90,6 +90,7 @@ define(function (require, exports) {
     afterStartup.writes = [locks.JS_APP];
 
     exports.hostVersion = hostVersion;
+
     exports.updateRecentFiles = updateRecentFiles;
     exports.afterStartup = afterStartup;
 });
