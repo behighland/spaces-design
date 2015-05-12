@@ -184,6 +184,7 @@ define(function (require, exports) {
     };
     incrementHistory.reads = [locks.PS_DOC];
     incrementHistory.writes = [locks.JS_HISTORY, locks.JS_DOC];
+    incrementHistory.modal = true;
 
     /**
      * Navigate to the previous history state
@@ -196,6 +197,7 @@ define(function (require, exports) {
     };
     decrementHistory.reads = [locks.PS_DOC];
     decrementHistory.writes = [locks.JS_HISTORY, locks.JS_DOC];
+    decrementHistory.modal = true;
 
     /**
      * Revert to the document's last saved state.
@@ -239,6 +241,7 @@ define(function (require, exports) {
     revertCurrentDocument.reads = [locks.PS_DOC];
     revertCurrentDocument.writes = [locks.JS_HISTORY, locks.JS_DOC];
     revertCurrentDocument.post = [layerActions._verifyLayerIndex];
+    revertCurrentDocument.modal = true;
 
     /**
      * Event handlers initialized in beforeStartup.
