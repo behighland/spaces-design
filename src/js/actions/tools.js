@@ -379,7 +379,8 @@ define(function (require, exports) {
             });
     };
     initTool.reads = [locks.JS_APP, locks.PS_TOOL, locks.JS_TOOL, locks.JS_SHORTCUT];
-    initTool.writes = [locks.PS_APP, locks.JS_POLICY, locks.PS_TOOL, locks.JS_TOOL, locks.JS_SHORTCUT];
+    initTool.writes = [locks.PS_APP, locks.JS_POLICY, locks.PS_TOOL, locks.JS_TOOL, locks.JS_SHORTCUT,
+            locks.PS_DOC, locks.JS_DOC];
 
     /**
      * Notify the stores of the modal state change
