@@ -115,7 +115,6 @@ define(function (require, exports, module) {
                 if ((currentTool.id === "typeCreateOrEdit" || currentTool.id === "superselectType") &&
                     layer.kind === layer.layerKinds.TEXT ){
                     UI.startEditWithCurrentModalTool(function(err){console.log(err)});
-                    console.log("HERE I AM");
                 }
             });
 
