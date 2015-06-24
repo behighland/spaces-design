@@ -32,7 +32,8 @@ define(function (require, exports, module) {
     
     var TextInput = require("jsx!js/jsx/shared/TextInput"),
         Select = require("jsx!js/jsx/shared/Select"),
-        Dialog = require("jsx!js/jsx/shared/Dialog");
+        Dialog = require("jsx!js/jsx/shared/Dialog"),
+        log = require("js/util/log");
 
     /**
      * Approximates an HTML <datalist> element. (CEF does not support datalist
@@ -256,7 +257,7 @@ define(function (require, exports, module) {
             this.setState({
                 active: false
             });
-            this._releaseFocus()
+            this._releaseFocus();
         },
 
         /**
@@ -269,7 +270,7 @@ define(function (require, exports, module) {
             this.setState({
                 active: false
             });
-            this._releaseFocus()
+            this._releaseFocus();
         },
 
         /**

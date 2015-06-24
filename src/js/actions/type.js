@@ -70,8 +70,8 @@ define(function (require, exports) {
                 coalesce: !!coalesce,
                 suppressHistoryStateNotification: !!coalesce
             },
-            canExecuteWhileModal : true,
-            ignoreTargetWhenModal : true
+            canExecuteWhileModal: true,
+            ignoreTargetWhenModal: true
         };
     };
 
