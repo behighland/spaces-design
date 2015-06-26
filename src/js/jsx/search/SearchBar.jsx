@@ -150,7 +150,7 @@ define(function (require, exports, module) {
 
             _.forEach(layerKind, function (kind) {
                 // No svg for these?
-                if (kind === "solidcolor" || kind === "gradient" || kind === "pattern"){
+                if (kind === "solidcolor" || kind === "gradient" || kind === "pattern") {
                     noSVG = true;
                 }
 
@@ -419,8 +419,8 @@ define(function (require, exports, module) {
 
         _getFilterIcon: function (filter) {
             // currently only have icons for layers
-            if (filter.length > 1 && filter.join(" ").indexOf("layer") > -1) {       
-                return this._getSVGInfo(filter);            
+            if (filter.length > 1 && filter.join(" ").indexOf("layer") > -1) {
+                return this._getSVGInfo(filter);
             } else {
                 return "tool-rectangle"; // standin for non-layers
             }
