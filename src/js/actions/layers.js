@@ -483,6 +483,9 @@ define(function (require, exports) {
                 } else {
                     this.dispatch(events.document.history.nonOptimistic.RESET_BOUNDS, payload);
                 }
+            }).catch(function () {
+                // Do nothing, but we don't want to reset bounds if PS sends us nothing
+                // This happens if you delete all the points in a shape too quickly
             });
     };
     resetBounds.reads = [locks.PS_DOC];
